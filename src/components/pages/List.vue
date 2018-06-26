@@ -10,24 +10,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th>1</th>
-          <td>Fromage de chevre</td>
+        <tr v-for="(dish, idx) in list" :key="dish.id">
+          <th>{{idx+1}}</th>
+          <td>{{dish.name}}</td>
           <td>
-            1
+            {{dish.good}}
           </td>
           <td>
-            5
-          </td>
-        </tr>
-        <tr>
-          <th>2</th>
-          <td>Cordon bleu</td>
-          <td>
-            2
-          </td>
-          <td>
-            1
+            {{dish.bad}}
           </td>
         </tr>
       </tbody>
@@ -36,8 +26,19 @@
 </template>
 
 <script>
+const URL_API = 'http://localhost:3000/dishes'
 export default {
-  name: 'list'
+  name: 'list',
+  data() {
+    return {
+      list: []
+    }
+  },
+   async created() {
+   const responseList = await this.axios.get(URL_API)
+   const list = responseList.data
+   this.list = list.sort((a, b) => b.bad - a.bad)
+  }
 }
 </script>
 

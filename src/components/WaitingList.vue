@@ -9,23 +9,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr v-for="dish in list">
       <th>12h15</th>
-      <td>Fromage de chevre</td>
-      <td>
-        <button class="button is-success is-outlined" disabled>
-          <i class="fa fa-check"></i>
-        </button>
-      </td>
-      <td>
-        <button class="button is-danger is-outlined" disabled>
-          <i class="fa fa-times"></i>
-        </button>
-      </td>
-    </tr>
-    <tr>
-      <th>20h30</th>
-      <td>Cordon bleu</td>
+      <td>{{dish.name}}</td>
       <td>
         <button class="button is-success is-outlined" disabled>
           <i class="fa fa-check"></i>
@@ -42,8 +28,20 @@
 </template>
 
 <script>
+const URL_API = 'http://localhost:3000/dishes'
 export default {
-  
+  name: 'waitingList',
+  data() {
+    return {
+      list: []
+    }
+  },
+  async created() {
+   const responseList = await this.axios.get(URL_API)
+   const list = responseList.data
+   this.list = list
+  }
+
 }
 </script>
 
