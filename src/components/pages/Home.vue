@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'hello',
+  name: 'home',
   data () {
     return {
       msg: 'Welcome to Your Vue.js PWA'
@@ -31,8 +31,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-h1, h2 {
+<style scoped>
+/* h1, h2 {
   font-weight: normal;
 }
 
@@ -48,5 +48,5 @@ li {
 
 a {
   color: #35495E;
-}
+} */
 </style>

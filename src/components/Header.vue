@@ -1,15 +1,15 @@
 <template>
   <div>
     <header>
-        <span>Whatsgood for you </span>
+        <span>Whatsgood for you</span>
       </header>
       <div class="tabs is-centered">
         <ul>
-          <li class="is-active">
-            <a>Accueil</a>
+          <li :class="isActive('Home') ? 'is-active' : ''">
+            <a v-on:click="goTo('Home')">Accueil</a>
           </li>
-          <li>
-            <a>Liste</a>
+          <li :class="isActive('List') ? 'is-active' : ''">
+            <a v-on:click="goTo('List')">Liste</a>
           </li>
         </ul>
       </div>
@@ -18,7 +18,18 @@
 
 <script>
 export default {
-  name:'Header'
+  name:'Header',
+  created() {
+    console.log('Hel created')
+  },
+  methods: {
+    isActive(routeName) {
+      return this.$route.name === routeName
+    },
+    goTo(routeName) {
+      this.$router.push(routeName)
+    }
+  }
 }
 </script>
 
