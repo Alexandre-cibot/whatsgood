@@ -1,24 +1,32 @@
 <template>
-  <div class="section">
-    <div class="field is-grouped">
-      <p class="control is-expanded">
-        <input class="input" type="text" placeholder="Ajoute un repas">
-      </p>
-      <p class="control">
-        <a class="button is-info">
-          Valider
-        </a>
-      </p>
-    </div>
+  <div>
+    <section class="section has-background-light">
+      <NewDishForm />
+    </section>
+    <section class="section">
+      <h2 class=" title is-5 has-text-left has-text-grey-dark">
+       Repas en attente de verdict
+      </h2>
+      <div class="container">
+        <WaitingList />
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
+import NewDishForm from '@/components/NewDishForm'
+import WaitingList from '@/components/WaitingList'
+
 export default {
   name: 'home',
+  components: {
+    NewDishForm,
+    WaitingList
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js PWA'
+      msg: ''
     }
   }
 }

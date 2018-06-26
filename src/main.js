@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import 'font-awesome/css/font-awesome.css'
 // Require the main Sass manifest file
 import './assets/sass/main.scss'
 
