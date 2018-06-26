@@ -5,8 +5,8 @@
         <tr>
           <th><abbr title="Heure">#</abbr></th>
           <th>Repas</th>
-          <th><i class="fa fa-check"></i></th>
           <th><i class="fa fa-times"></i></th>
+          <th><i class="fa fa-check"></i></th>
         </tr>
       </thead>
       <tbody>
@@ -14,10 +14,10 @@
           <th>{{idx+1}}</th>
           <td>{{dish.name}}</td>
           <td>
-            {{dish.good}}
+            {{dish.bad}}
           </td>
           <td>
-            {{dish.bad}}
+            {{dish.good}}
           </td>
         </tr>
       </tbody>

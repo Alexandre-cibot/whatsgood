@@ -2,7 +2,7 @@
   "dishes": [
     { "id": 1, "name": "Fromage de chevre", "good": 3, "bad": 4 },
     { "id": 2, "name": "Haricot vert", "good": 10, "bad": 2 },
-    { "id": 1, "name": "Fromage de chevre", "good": 1, "bad": 3 },
+    { "id": 1, "name": "soupe de carrotte vertes", "good": 1, "bad": 3 },
     { "id": 3, "name": "pizza", "good": 3, "bad": 1 }
   ]
 }

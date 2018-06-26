@@ -13,13 +13,13 @@
       <th>12h15</th>
       <td>{{dish.name}}</td>
       <td>
-        <button class="button is-success is-outlined" disabled>
-          <i class="fa fa-check"></i>
+        <button class="button is-danger is-outlined" disabled>
+          <i class="fa fa-times"></i>
         </button>
       </td>
       <td>
-        <button class="button is-danger is-outlined" disabled>
-          <i class="fa fa-times"></i>
+        <button class="button is-success is-outlined" disabled>
+          <i class="fa fa-check"></i>
         </button>
       </td>
     </tr>

@@ -5,8 +5,9 @@
     </section>
     <section class="section">
       <h2 class=" title is-5 has-text-left has-text-grey-dark">
-       Repas en attente de verdict
+       Liste en attente
       </h2>
+      <p class="subtitle is-6">Attends quelque heure, et coche la case</p>
       <div class="container">
         <WaitingList />
       </div>
