@@ -1,5 +1,5 @@
 <template>
-  <div class="field has-addons sourceselection">
+  <div class="newDishForm field has-addons sourceselection">
       <p class="control is-expanded">
         <input class="input form-control" v-model="source" list="newssources-list" v-on:input="sourceChanged" 
                  name="source-selection" id="source-selection"
@@ -53,5 +53,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.newDishForm {
+  margin: 0 auto;
+  max-width: 320px;
+}
 </style>
