@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-        <span>What's good for you <i class="fa fa-heart red" style="-webkit-text-fill-color: black"></i></span>
+        <span>What's good for you <i class="fa fa-heart red" style="-webkit-text-fill-color: red"></i></span>
       </header>
       <div class="tabs is-centered">
         <ul>
